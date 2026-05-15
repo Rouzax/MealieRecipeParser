@@ -1,0 +1,85 @@
+{
+  "rules": [
+    {
+      "terms": [
+        "vegan",
+        "veganistisch"
+      ],
+      "url": "https://schema.org/VeganDiet"
+    },
+    {
+      "terms": [
+        "vegetarisch",
+        "vegetarian"
+      ],
+      "url": "https://schema.org/VegetarianDiet"
+    },
+    {
+      "terms": [
+        "glutenvrij",
+        "gluten-free"
+      ],
+      "url": "https://schema.org/GlutenFreeDiet"
+    },
+    {
+      "terms": [
+        "halal"
+      ],
+      "url": "https://schema.org/HalalDiet"
+    },
+    {
+      "terms": [
+        "kosher"
+      ],
+      "url": "https://schema.org/KosherDiet"
+    },
+    {
+      "terms": [
+        "lactosevrij",
+        "lactose free",
+        "dairy-free",
+        "dairy free"
+      ],
+      "url": "https://schema.org/LowLactoseDiet"
+    },
+    {
+      "terms": [
+        "keto",
+        "ketogeen",
+        "ketogenic"
+      ],
+      "url": "https://schema.org/KetogenicDiet"
+    },
+    {
+      "terms": [
+        "paleo"
+      ],
+      "url": "https://schema.org/PaleoDiet"
+    },
+    {
+      "terms": [
+        "diabetic",
+        "diabetes",
+        "diabetisch"
+      ],
+      "url": "https://schema.org/DiabeticDiet"
+    },
+    {
+      "terms": [
+        "zoutarm",
+        "low salt",
+        "low-salt"
+      ],
+      "url": "https://schema.org/LowSaltDiet"
+    },
+    {
+      "terms": [
+        "vetarm",
+        "low fat",
+        "low-fat"
+      ],
+      "url": "https://schema.org/LowFatDiet"
+    }
+  ],
+  "policy": "Voeg suitableForDiet alleen toe als de bron expliciet een dieet/geschiktheid noemt. Output mag string of array zijn."
+}

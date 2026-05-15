@@ -1,0 +1,263 @@
+{
+  "allowed": [
+    "Ontbijt",
+    "Lunch",
+    "Brunch",
+    "Voorgerecht",
+    "Hoofdgerecht",
+    "Bijgerecht",
+    "Soep",
+    "Salade",
+    "Snack",
+    "Tussendoortje",
+    "Borrelhapjes",
+    "Nagerecht",
+    "Gebak",
+    "Taart",
+    "Koekjes",
+    "Brood",
+    "Dranken & Cocktails",
+    "Saus",
+    "Dressing",
+    "Marinade",
+    "BBQ"
+  ],
+  "max_selected": 3,
+  "fallback": "Hoofdgerecht",
+  "priority_groups": [
+    [
+      "Dressing",
+      "Marinade",
+      "Saus"
+    ],
+    [
+      "Dranken & Cocktails"
+    ],
+    [
+      "Soep",
+      "Salade"
+    ],
+    [
+      "Brood",
+      "Koekjes",
+      "Taart",
+      "Gebak",
+      "Nagerecht"
+    ],
+    [
+      "BBQ"
+    ],
+    [
+      "Borrelhapjes",
+      "Snack",
+      "Tussendoortje"
+    ],
+    [
+      "Ontbijt",
+      "Lunch",
+      "Brunch"
+    ],
+    [
+      "Voorgerecht",
+      "Bijgerecht"
+    ],
+    [
+      "Hoofdgerecht"
+    ]
+  ],
+  "keyword_rules": [
+    {
+      "if_any": [
+        "dressing",
+        "vinaigrette",
+        "saladedressing"
+      ],
+      "then": "Dressing"
+    },
+    {
+      "if_any": [
+        "marinade",
+        "gemarineerd",
+        "marineren",
+        "rub"
+      ],
+      "then": "Marinade"
+    },
+    {
+      "if_any": [
+        "saus",
+        "gravy",
+        "coulis",
+        "pesto",
+        "chutney",
+        "salsa",
+        "dip"
+      ],
+      "then": "Saus"
+    },
+    {
+      "if_any": [
+        "dal",
+        "dahl",
+        "daal",
+        "tarka dal",
+        "tadka",
+        "tarka",
+        "peyaj dal"
+      ],
+      "then": "Bijgerecht"
+    },
+    {
+      "if_any": [
+        "cocktail",
+        "mocktail",
+        "smoothie",
+        "sap",
+        "limonade",
+        "latte",
+        "koffie",
+        "thee"
+      ],
+      "then": "Dranken & Cocktails"
+    },
+    {
+      "if_any": [
+        "soep",
+        "bouillon",
+        "bisque",
+        "ramen",
+        "noedelsoep"
+      ],
+      "then": "Soep"
+    },
+    {
+      "if_any": [
+        "salade",
+        "coleslaw"
+      ],
+      "then": "Salade"
+    },
+    {
+      "if_any": [
+        "brood",
+        "naan",
+        "focaccia",
+        "brioche",
+        "stokbrood",
+        "bolletjes",
+        "broodjes"
+      ],
+      "then": "Brood"
+    },
+    {
+      "if_any": [
+        "koekjes",
+        "cookies",
+        "biscotti",
+        "shortbread"
+      ],
+      "then": "Koekjes"
+    },
+    {
+      "if_any": [
+        "taart",
+        "pie",
+        "quiche",
+        "tarte"
+      ],
+      "then": "Taart"
+    },
+    {
+      "if_any": [
+        "cake",
+        "muffin",
+        "muffins",
+        "brownie",
+        "brownies",
+        "cupcake",
+        "cupcakes",
+        "gebak",
+        "scones"
+      ],
+      "then": "Gebak"
+    },
+    {
+      "if_any": [
+        "dessert",
+        "nagerecht",
+        "pudding",
+        "ijs",
+        "mousse",
+        "tiramisu",
+        "crème brûlée"
+      ],
+      "then": "Nagerecht"
+    },
+    {
+      "if_any": [
+        "bbq",
+        "barbecue",
+        "smoker",
+        "low & slow",
+        "grillen",
+        "houtskool"
+      ],
+      "then": "BBQ"
+    },
+    {
+      "if_any": [
+        "borrel",
+        "hapjes",
+        "fingerfood",
+        "party bites",
+        "canapé"
+      ],
+      "then": "Borrelhapjes"
+    },
+    {
+      "if_any": [
+        "snack",
+        "tussendoor",
+        "reep",
+        "energy balls"
+      ],
+      "then": "Snack"
+    },
+    {
+      "if_any": [
+        "ontbijt",
+        "oats",
+        "overnight oats",
+        "pannenkoek"
+      ],
+      "then": "Ontbijt"
+    },
+    {
+      "if_any": [
+        "lunch"
+      ],
+      "then": "Lunch"
+    },
+    {
+      "if_any": [
+        "brunch"
+      ],
+      "then": "Brunch"
+    },
+    {
+      "if_any": [
+        "voorgerecht",
+        "starter"
+      ],
+      "then": "Voorgerecht"
+    },
+    {
+      "if_any": [
+        "bijgerecht",
+        "side"
+      ],
+      "then": "Bijgerecht"
+    }
+  ],
+  "selection_policy": "Selecteer 1..3 categorieën op basis van keyword_rules matches en priority_groups volgorde. Max 3. Als niets matcht: fallback. Heuristiek: dal/dahl/daal/tarka/tadka/peyaj -> Bijgerecht (tenzij expliciet hoofdgerecht)."
+}

@@ -1,0 +1,18 @@
+# Claude Code
+CLAUDE.md
+TODO.md
+.claude/
+.superpowers/
+
+# IDE / Editors
+.vscode/
+.idea/
+
+# OS generated
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*~
