@@ -58,7 +58,7 @@ Output: one JSON code block
 2. Copy the contents of `system-prompt.txt` into **Project Instructions**
 3. Upload all other files as **Project Files**
 
-That's it. Start chatting with a recipe.
+That's it. Start chatting with a recipe. See the [examples](examples/) folder for real input/output pairs.
 
 ## How It Works
 
