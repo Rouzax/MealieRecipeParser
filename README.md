@@ -3,7 +3,7 @@
 [![Mealie v2.x](https://img.shields.io/badge/Mealie-v2.x-green.svg)](https://mealie.io)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-A ChatGPT Project that converts recipes from photos, screenshots, PDF text, or URLs into **schema.org/Recipe JSON-LD** for import into [Mealie](https://mealie.io).
+An LLM prompt kit that converts recipes from photos, screenshots, PDF text, or URLs into **schema.org/Recipe JSON-LD** for import into [Mealie](https://mealie.io). Works with any LLM that supports system prompts and file attachments (ChatGPT, Claude, Gemini, etc.).
 
 ## What It Does
 
@@ -54,11 +54,22 @@ Output: one JSON code block
 
 ## Setup
 
-1. Create or open a ChatGPT Project
-2. Copy the contents of `system-prompt.txt` into **Project Instructions**
-3. Upload all other files as **Project Files**
+The prompt kit works with any LLM that supports a system prompt and file attachments.
 
-That's it. Start chatting with a recipe. See the [examples](examples/) folder for real input/output pairs.
+**ChatGPT:**
+1. Create or open a Project
+2. Copy the contents of `system-prompt.txt` into Project Instructions
+3. Upload all other files as Project Files
+
+**Claude / other LLMs:**
+1. Start a new conversation
+2. Paste `system-prompt.txt` as the first message (or set as system prompt)
+3. Attach the reference files as context
+
+See the [examples](examples/) folder for real input/output pairs.
+
+!!! note
+    The `/image` mode (food photo generation) requires an LLM with image generation capabilities.
 
 ## How It Works
 
