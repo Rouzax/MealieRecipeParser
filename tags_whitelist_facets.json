@@ -56,6 +56,7 @@
     ],
     "eiwit": [
       "kip",
+      "kalkoen",
       "rund",
       "varken",
       "vis",
@@ -111,6 +112,7 @@
     "tijd | 30-60",
     "tijd | 60+",
     "eiwit | kip",
+    "eiwit | kalkoen",
     "eiwit | rund",
     "eiwit | varken",
     "eiwit | vis",
