@@ -54,6 +54,19 @@ Regels:
 - alleen gebruiken als er een **duidelijke dierlijke** hoofdcomponent is
 - niet gebruiken bij vegetarisch/vegan (daar volstaat `dieet | …`)
 - geen ingredient-tags (dus niet `eiwit | linzen`)
+- toegestane waarden staan in `tags_whitelist_facets.json` (`allowedByType.eiwit`)
+
+Keuze van de juiste waarde:
+- **kip** is alleen kip. Kalkoen krijgt `eiwit | kalkoen`, dus nooit `eiwit | kip` voor kalkoen.
+- **wild** dekt zowel wildvogels (fazant, duif, kwartel) als wildvlees (hert, ree, everzwijn, haas).
+  Let op: `haas` is het dier (wild), niet de varkenshaas of runderhaas; die vallen onder varken/rund.
+- **gefokt gevogelte zonder eigen waarde** (eend, gans, parelhoen) heeft nog geen waarde: laat `eiwit`
+  dan weg in plaats van een verkeerde waarde te kiezen.
+- **vis** is vis; schaal- en weekdieren (garnaal, gamba, mossel, inktvis) krijgen `schaal-schelp`.
+- **vleeswaren** (bacon, ham, chorizo) zijn meestal smaakmaker, geen hoofd-eiwitbron. Kies ze alleen als
+  er geen ander dierlijk hoofdbestanddeel is.
+- bij een mix zonder duidelijke hoofdbron (bijv. half-om-half gehakt) of bij onbepaald `gehakt`: laat
+  `eiwit` weg.
 
 ## pittig (optioneel, exact 0 of 1 per recept)
 Doel: filteren op “hoe spicy is dit?” zonder een algemene eigenschap-vergaarput.
