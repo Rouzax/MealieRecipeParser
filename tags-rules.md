@@ -69,28 +69,45 @@ Keuze van de juiste waarde:
   `eiwit` weg.
 
 ## pittig (optioneel, exact 0 of 1 per recept)
-Doel: filteren op “hoe spicy is dit?” zonder een algemene eigenschap-vergaarput.
+Doel: filteren op “hoe spicy is dit?”.
+
+`pittig` meet de ervaren scherpte of hitte van het uiteindelijke gerecht voor een gemiddelde
+Nederlandse eter. Het meet **niet** hoe sterk of aromatisch een gerecht gekruid is.
 
 Toegestane waarden:
-- `pittig | mild`   (niet of nauwelijks pittig)
-- `pittig | medium` (duidelijk pittig, maar voor de meeste mensen eetbaar)
-- `pittig | heet`   (echt pittig; voor liefhebbers)
+- `pittig | mild`   (geen of nauwelijks waarneembare hitte)
+- `pittig | medium` (duidelijke maar goed eetbare hitte)
+- `pittig | heet`   (uitgesproken of dominante hitte)
 
 Regels:
 - gebruik **max 1** pittig-tag per recept
 - twijfel? laat weg (geen tag is ook een keuze)
+- beoordeel indien mogelijk relatief aan ongeveer 4 porties
+- expliciete uitspraken van de bron over **hitte** wegen zwaar; “spiced” of “well-spiced” betekent
+  niet automatisch pittig
 
 ### Hoe bepaal je pittig?
-Gebruik een **pragmatische** inschatting voor een “gemiddelde NL-eter” en kijk naar:
-- **Ingrediënten & hoeveelheid** (per ~4 porties):
-  - *mild*: geen chili/peper, of alleen een klein beetje (bijv. 1 milde chili zonder zaadjes) of “optioneel naar smaak”
-  - *medium*: 1–2 (milde/medium) chili’s of merkbaar chili-component (bijv. chilivlokken/poeder) zonder dat het als “heel heet” bekend staat
-  - *heet*: meerdere chili’s, hete pepers (bijv. habanero/scotch bonnet), veel chilivlokken/poeder, of recept/bron noemt expliciet “very hot”/“spicy”
-- **Tekstsignalen** in titel/omschrijving (woorden als “heet”, “pittig”, “spicy”, “hot”)
-- **Serveertips** (bijv. waarschuwingen, “alleen voor liefhebbers”, extra koeling nodig)
+Beoordeel eerst expliciete uitspraken van de bron, kijk daarna naar soort, hoeveelheid en
+bereidingswijze van scherpe ingrediënten:
+- **Chili** telt altijd mee. Houd rekening met het type: Kashmiri-chili is relatief mild;
+  habanero, scotch bonnet en bird’s eye zijn heet.
+- **Zwarte/witte peper** telt alleen duidelijk mee als het een dragende component is, niet als
+  gewone kruiderij.
+- **Mosterd, mierikswortel, wasabi en verse gember** kunnen meetellen als hun scherpte duidelijk
+  aanwezig blijft, vooral rauw of kort verhit.
+- Langdurig verhitte mosterdolie of meegestoofde gember telt normaal niet zelfstandig mee.
+
+Aromatische specerijen zoals kardemom, kruidnagel, kaneel/cassia, komijn, korianderzaad, kurkuma,
+venkel, foelie en garam masala tellen **niet** mee voor pittigheid.
+
+### Ankers per ~4 porties
+- *mild*: geen chili, slechts een kleine hoeveelheid milde chili, of chili die optioneel is dan wel
+  apart wordt geserveerd
+- *medium*: 1–2 milde/medium chili’s of een duidelijk merkbare chili-component
+- *heet*: meerdere chili’s, hete chilisoorten (habanero, scotch bonnet, bird’s eye), veel
+  chilipoeder of -vlokken, of door de bron expliciet als heet beschreven
 
 Praktisch:
-- Als je het gerecht makkelijk “niet pittig” kunt maken (chili geheel optioneel), tag dan meestal **niet** of kies **mild**.
 - Als je je oude tag `pittig` moet mappen: gebruik standaard `pittig | medium`.
 
 
