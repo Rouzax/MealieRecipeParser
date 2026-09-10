@@ -20,11 +20,15 @@
     "Saus",
     "Dressing",
     "Marinade",
-    "BBQ"
+    "BBQ",
+    "Ingredienten"
   ],
   "max_selected": 3,
   "fallback": "Hoofdgerecht",
   "priority_groups": [
+    [
+      "Ingredienten"
+    ],
     [
       "Dressing",
       "Marinade",
