@@ -48,12 +48,21 @@ Richtlijnen:
   Voorbeeld: `bengaals` → `keuken | indiaas`.
 - voeg een nieuwe keuken pas toe aan de whitelist als je er **minstens 2–3 recepten** voor hebt.
 
-## eiwit (optioneel, max 1 per recept; alleen dierlijk)
-Doel: filteren op hoofd-eiwitbron bij niet-vegetarische recepten.
+## eiwit (optioneel, max 2 per recept; alleen dierlijk)
+Doel: filteren op belangrijke dierlijke eiwitbronnen bij niet-vegetarische recepten.
+
 Regels:
-- alleen gebruiken als er een **duidelijke dierlijke** hoofdcomponent is
+- tag elke **duidelijke dierlijke hoofdcomponent**
+- bij twee gelijkwaardige hoofdbronnen: tag beide
+- bij **meer dan twee** bronnen: kies de twee dominante, of laat `eiwit` weg als er geen twee
+  duidelijk uitspringen
+- een **keuze** tussen twee soorten ("runder- of lamsgehakt") is geen mix: dat is een variant,
+  geen tweede bron. Tag de eerstgenoemde, of laat weg als het recept geen voorkeur uitspreekt
+- een kleine hoeveelheid als smaakmaker (bijv. bacon, ham, chorizo) telt niet mee naast een
+  andere hoofdbron
 - niet gebruiken bij vegetarisch/vegan (daar volstaat `dieet | …`)
 - geen ingredient-tags (dus niet `eiwit | linzen`)
+- bij onbepaald vlees of `gehakt` zonder genoemde diersoort: laat `eiwit` weg
 - toegestane waarden staan in `tags_whitelist_facets.json` (`allowedByType.eiwit`)
 
 Keuze van de juiste waarde:
@@ -65,8 +74,16 @@ Keuze van de juiste waarde:
 - **vis** is vis; schaal- en weekdieren (garnaal, gamba, mossel, inktvis) krijgen `schaal-schelp`.
 - **vleeswaren** (bacon, ham, chorizo) zijn meestal smaakmaker, geen hoofd-eiwitbron. Kies ze alleen als
   er geen ander dierlijk hoofdbestanddeel is.
-- bij een mix zonder duidelijke hoofdbron (bijv. half-om-half gehakt) of bij onbepaald `gehakt`: laat
-  `eiwit` weg.
+
+Voorbeelden:
+- 500 g rundergehakt -> `eiwit | rund`
+- 500 g half-om-half gehakt -> `eiwit | rund` + `eiwit | varken`
+- 250 g rund + 250 g varken -> `eiwit | rund` + `eiwit | varken`
+- 500 g kip + 75 g bacon -> `eiwit | kip`
+- 500 g runder- of lamsgehakt -> `eiwit | rund`
+- 200 g gehakt, soort niet genoemd -> geen `eiwit`
+- 400 g eendenborst -> geen `eiwit` (nog geen toegestane waarde)
+- kip, chorizo en garnalen in een gerecht -> kies de twee dominante, of laat weg
 
 ## pittig (optioneel, exact 0 of 1 per recept)
 Doel: filteren op “hoe spicy is dit?”.
@@ -126,5 +143,6 @@ Richtlijnen per type:
 - `tijd | …`: **exact 1** (verplicht)
 - `keuken | …`: **0–1** (2 alleen bij fusion)
 - `dieet | …`: **0–3**
-- `eiwit | …`: **0–1** (alleen dierlijk; weglaten bij vegetarisch/vegan)
+- `eiwit | …`: **0–2** (alleen dierlijk; weglaten bij vegetarisch/vegan; 2 alleen bij een
+  echte mix, zoals half-om-half gehakt)
 - `pittig | …`: **0–1**
